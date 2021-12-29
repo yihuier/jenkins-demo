@@ -15,6 +15,6 @@ public class JenkinsDemoApplication {
 
     @RequestMapping("/demo")
     public String demo() {
-        return "hello jenkins";
+        return "hello world";
     }
 }
