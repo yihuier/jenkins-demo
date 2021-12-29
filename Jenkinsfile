@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                 sh 'mvnw clean package'
+                 sh './mvnw clean package'
                  sh "mv ./package/*.jar ./docker/"
             }
         }
