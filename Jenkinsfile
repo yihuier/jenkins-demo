@@ -20,7 +20,7 @@ pipeline {
         stage('deploy') {
             steps {
                  sh 'docker ps -f name=jenkins-demo-project -q | xargs --no-run-if-empty docker container stop'
-                 sh 'docker container ls -a -fname=jenkins-demo-project -q | xargs -r docker container rm'
+                 sh 'docker container ls -a -f name=jenkins-demo-project -q | xargs -r docker container rm'
                  sh "docker run --name jenkins-demo-project -p 9000:9000 -d jenkins-demo-project:latest"
             }
         }
