@@ -13,9 +13,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>jenkins-demo</name>
     <description>Demo project for Spring Boot</description>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+    <packaging>jar</packaging>
+<!--    <properties>-->
+<!--        <java.version>11</java.version>-->
+<!--    </properties>-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,12 +31,31 @@
     </dependencies>
 
     <build>
+        <finalName>app</finalName>
+<!--        <outputDirectory>${project.basedir}/package</outputDirectory>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${project.basedir}/package</outputDirectory>
+                </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <outputDirectory>${project.basedir}/package</outputDirectory>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <addClasspath>true</addClasspath>-->
+<!--                            <mainClass>com.example.jenkinsdemo.JenkinsDemoApplication</mainClass> &lt;!&ndash; 此处为主入口&ndash;&gt;-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
+
 
 </project>
