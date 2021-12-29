@@ -1,6 +1,6 @@
 #!groovy
 
-apps = ['linas-jenkins-demo-project']
+apps = ['jenkins-demo-project']
 
 pipeline {
     agent any
