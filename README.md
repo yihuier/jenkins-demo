@@ -2,3 +2,4 @@
 用于测试jenkins CI/CD
 
 - 测试github webhook 
+- github sync to gitee
